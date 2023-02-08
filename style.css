@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  background-color: aquamarine;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+#monthly-calendar {
+  background: #fff;
+
+  display: grid;
+  grid-template-columns: repeat(7, 10vmin);
+
+  grid-template-rows: 10vmin 3vmin;
+  grid-auto-rows: 10vmin;
+  gap: 0.2rem;
+}
+
+#monthly-calendar > header {
+  background: #000;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: span 7;
+  grid-row: 1/2;
+}
+
+#monthly-calendar > header > h1 {
+  font-size: 4vmin;
+}
+
+.day-header-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vmin;
+  font-weight: bold;
+}
+
+.day-field {
+  font-size: 2vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bbb;
+  background: #ddd;
+
+  padding: 1rem 5px;
+}
+
+.not-current-month {
+  background: transparent;
+}
